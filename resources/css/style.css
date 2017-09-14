@@ -9,14 +9,15 @@ html {
 }
 div {
   display: block;
-  border: 2px solid black;
 }
 header {
   background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/tortoiseshell-optics/resources/images/glasses-bg.png");
-  height: 50rem;
+  height: 30rem;
   width: 100%;
+  background-position: center;
+  background-size: cover;
 }
-.top {
+header .top {
   background-color: cadetblue;
   display: inline-flex;
   width: 960px;
@@ -40,6 +41,14 @@ header .right {
   justify-content: flex-end;
   align-items: center;
 }
+header nav {
+  justify-content: flex-end;
+}
+div nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 span {
   display: inline-flex;
   justify-content: flex-end;
@@ -54,10 +63,11 @@ span {
   font-weight: bold;
   font-size: 2rem;
   line-height: 1.2;
-  margin-top: 14rem;
+  margin-top: 10rem;
   max-width: 460px;
   display: flex;
   margin-left: 950px;
+  margin-right: 300px;
 }
 .pics {
   display: inline-flex;
@@ -98,9 +108,13 @@ span {
   width: 10rem;
 }
 .info {
-  max-width: 960px;
   display: block;
   justify-content: center;
+}
+.both {
+  display: inline-flex;
+  justify-content: center;
+  width: 960px;
 }
 p {
   width: 35%;
@@ -109,8 +123,9 @@ p {
   text-align: left;
 }
 footer {
-  display: block;
+  display: flex;
   justify-content: center;
+  padding: 4rem 2rem;
 }
 .foot {
   background-color: azure;
@@ -125,4 +140,73 @@ footer img {
   padding-top: 4rem;
   padding-bottom: 4rem;
   padding-left: 4rem;
+}
+@media only screen and (max-width: 1024px) {
+  header .top {
+    margin-top: auto;
+  }
+  header {
+    height: 22rem;
+  }
+  .bottom {
+    padding: .75rem 4rem;
+    font-size: 1.33rem;
+    margin-top: 5rem;
+    margin-right: 2rem;
+    margin-left: auto;
+  }
+  div nav {
+    max-width: 100%;
+  }
+  body {
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  header {
+    height: 17rem;
+  }
+  div nav {
+    display: none;
+  }
+  .top h4 {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .bottom {
+    width: 100%;
+    margin-top: 9rem;
+    padding: 1rem auto;
+  }
+  .pics {
+    display: inline-block;
+    margin-top: 3.77rem auto;
+    font-size: .77rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .info {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .info h2 {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+  }
+  p {
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    font-size: .77rem;
+    justify-content: center;
+  }
+  footer h3 {
+    display: none;
+  }
+  footer {
+    width: 100%;
+  }
 }
